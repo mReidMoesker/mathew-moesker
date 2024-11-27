@@ -90,6 +90,17 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
+h3 {
+  color: #fff;
+  font-size: 12px;
+}
+
 header {
   height: calc(100vh - 15.7px);
   background-color: rgb(7, 8, 15);
@@ -106,15 +117,4 @@ header {
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
-h2 {
-  font-size: 20px;
-  font-weight: 500;
-  color: #fff;
-}
-
-h3 {
-  color: #fff;
-  font-size: 12px;
 }
