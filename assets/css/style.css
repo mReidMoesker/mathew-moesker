@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 :root {
     --app-footer-height: 60px;
     --app-footer-font-size: 16px;
@@ -25,6 +24,14 @@
   animation: glow 2s infinite ease-in-out;
 }
 
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+header, main, footer {
+  width: 100%;
+  overflow: hidden;
+}
 
 .green      {color: rgb(26, 255, 26);}
 .blue       {color: rgb(58, 58, 255);}
@@ -37,6 +44,7 @@
 .container {
   width: min(100% - 30px, 1080px);
   margin: auto;
+  text-wrap: wrap;
 }
 
 .flex {
@@ -47,11 +55,12 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   height: 100%;
-  margin-top: 20px;
+  gap: 20px;
 }
 
 .flex-between {
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .flex-center {
@@ -82,8 +91,6 @@
   height: 100%;
 }
 
-/* Terminal-style font */
-
 .bold {
   font-weight: 700;
   font-style: normal;
@@ -94,6 +101,7 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: rgb(7, 8, 15);
+  box-sizing: border-box;
 }
 
 a {
@@ -120,20 +128,22 @@ h3 {
 
 header {
   height: 800px;
-  background-color: rgb(7, 8, 15);
+  background-color: rgb(6, 7, 11);
 }
 
 main {
-  height: calc(100svh + 10px);
+  padding-top: 90px;
+  margin-bottom: 90px;
+  height: calc(100svh);
 }
 
 footer {
-  height: 100px;
+  height: auto;
   margin-bottom: 0;
+  margin-top: 0;
 
   ul {
     list-style: none;
-    margin: 0;
     padding: 0;
 
     li {
@@ -163,6 +173,14 @@ footer {
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  
+  h2 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 25px;
+  }
 }
 
 .brand-image {
@@ -177,8 +195,101 @@ footer {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
   .container {
-    margin-left: 2px;
+    width: 95%;
+    margin: auto;
+  }
+
+  .center-text {
+    position: static;
+    transform: none;
+    margin: 20px 0;
+    text-align: left;
+  }
+
+  .center-text h2 {
+    font-size: 24px;
+  }
+
+  .center-text p {
+    font-size: 16px;
+  }
+
+  .brand-image {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .brand-image img {
+    height: 80px;
+    width: 80px;
+  }
+
+  main {
+    padding-top: 30px;
+  }
+
+  .section {
+    height: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .main-text {
+    text-align: left;
+  }
+
+  .main-text h2 {
+    font-size: 18px;
+  }
+
+  .main-text p {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer li {
+    padding: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .center-text h2 {
+    font-size: 18px;
+  }
+
+  .center-text p {
+    font-size: 14px;
+  }
+
+  .main-text h2 {
+    font-size: 16px;
+  }
+
+  .main-text p {
+    font-size: 12px;
+  }
+
+  .brand-image img {
+    height: 60px;
+    width: 60px;
   }
 }
