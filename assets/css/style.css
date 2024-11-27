@@ -8,6 +8,22 @@
     --app-section-margin-bottom: 80px;
 }
 
+.green {
+  color: rgb(26, 255, 26);
+}
+
+.blue {
+  color: rgb(58, 58, 255);
+}
+
+.yellow {
+  color: rgb(255, 255, 55)
+}
+
+.red {
+  color: rgb(250, 45, 45)
+}
+
 .container {
   width: min(100% - 30px, 1080px);
   margin: auto;
@@ -67,7 +83,7 @@
 
 body {
     font-family: "Poppins", "Noto Sans", Arial, sans-serif;
-    background-color: rgb(62, 62, 62);
+    background-color: rgb(7, 8, 15);
 }
 
 a {
@@ -85,8 +101,11 @@ header {
 }
 
 .header-text {
-  place-content: center;
-  text-align: left;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 h2 {
@@ -95,10 +114,7 @@ h2 {
   color: #fff;
 }
 
-.green {
-  color: rgb(26, 255, 26);
-}
-
-.blue {
-  color: rgb(58, 58, 255);
+h3 {
+  color: #fff;
+  font-size: 12px;
 }
