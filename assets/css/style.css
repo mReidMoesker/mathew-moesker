@@ -6,7 +6,25 @@
     --app-footer-font-size: 16px;
     --app-section-margin-top: 80px;
     --app-section-margin-bottom: 80px;
+    --neon-effect: 0 0 0 transparent,
 }
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 0.25px currentColor, 0 0 0.5px currentColor, 0 0 1.2px currentColor;
+  }
+  50% {
+    text-shadow: 0 0 0.25px currentColor, 0 0 0.75px currentColor, 0 0 1.4px currentColor;
+  }
+  100% {
+    text-shadow: 0 0 0.25px currentColor, 0 0 0.5px currentColor, 0 0 1.3px currentColor;
+  }
+}
+
+.glowing-text span {
+  animation: glow 2s infinite ease-in-out;
+}
+
 
 .green      {color: rgb(26, 255, 26);}
 .blue       {color: rgb(58, 58, 255);}
