@@ -40,6 +40,10 @@
   justify-content: center;
 }
 
+.center {
+  text-align: center;
+}
+
 .grid-center {
   place-items: center;
 }
@@ -101,6 +105,40 @@ header {
   background-color: rgb(7, 8, 15);
 }
 
+main {
+  height: calc(100svh + 10px);
+}
+
+footer {
+  height: 100px;
+  margin-bottom: 0;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 8px;
+      text-align: center;
+    }
+  
+  }
+
+  hr {
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+    border: 1px solid #fff;
+    color: #fff;
+  }
+}
+
+.section {
+  height: 200px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
 .center-text {
   margin: 0;
   position: absolute;
@@ -109,11 +147,8 @@ header {
   transform: translateY(-50%);
 }
 
-main {
-  height: calc(100svh - 10px);
-}
-
-.section {
-  height: 200px;
-  padding-top: 10px;
+@media (max-width: 400px) {
+  .container {
+    margin-left: 2px;
+  }
 }
